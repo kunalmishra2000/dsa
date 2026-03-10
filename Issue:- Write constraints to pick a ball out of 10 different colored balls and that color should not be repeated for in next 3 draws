@@ -1,3 +1,5 @@
+//link:- https://www.youtube.com/watch?v=uJ2LMd2kI5w
+
 typedef enum { Red, Blue, Green, Yellow, Black, White, Pink, Orange, Purple, Brown} color;
 class packet;
  rand color clr;
