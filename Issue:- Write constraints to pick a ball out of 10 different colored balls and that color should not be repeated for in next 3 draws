@@ -1,0 +1,17 @@
+typedef enum { Red, Blue, Green, Yellow, Black, White, Pink, Orange, Purple, Brown} color;
+class packet;
+ rand color clr;
+  
+  function void post_randomize();
+    $display("a=%s", clr);
+  endfunction 
+  
+endclass
+
+module tab;
+  packet pac=new();
+  initial begin
+    
+    pac.randomize();
+  end
+endmodule 
