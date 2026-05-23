@@ -1,0 +1,15 @@
+// find the sum of 2 number
+
+module tab;
+   
+int a,b;
+  function  int sum(int a,b);
+    return a+b;
+    
+  endfunction 
+  
+  initial begin
+    int d=sum(6,10);
+    $display("sum=%0d", d);
+  end
+endmodule 
