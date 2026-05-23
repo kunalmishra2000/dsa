@@ -1,0 +1,15 @@
+// find the min number between two variable 
+
+module tab;
+  int a=5;
+  int b=6;
+  
+  function void min();
+    if(a<b)
+      $display(" we find the min number between  2 ");
+  endfunction
+   
+  initial begin
+    min();
+  end
+endmodule 
