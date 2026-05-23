@@ -1,0 +1,19 @@
+// find the is number is odd or even
+
+module tab;
+  int a;
+  
+  function void find_odd_even(int a);
+    if(a%2==0)
+      $display(" even number =%0d", a);
+    else 
+      $display("odd number =%0d", a);
+    
+  endfunction
+   
+  initial begin
+    find_odd_even(5);
+    find_odd_even(6);
+
+  end
+endmodule 
