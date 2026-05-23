@@ -1,0 +1,9 @@
+// find the area of square
+
+module tab;
+  int a=5;
+   
+  initial begin
+    $display("area of square=%0d", a*a);
+  end
+endmodule 
