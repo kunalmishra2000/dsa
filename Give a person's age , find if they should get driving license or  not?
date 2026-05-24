@@ -1,0 +1,22 @@
+// Give a person's age , find if they should get driving license or  not?
+
+
+module tab;
+   string person;
+   int age;
+  
+  function  void check_age(string person, int age);
+    if(age>20)	
+      $display(" he/she is eligible for license [ name=%s age =%0d]", person,age);
+    else
+      $display(" he/she is not eligible for license [ name=%s age =%0d]", person,age);
+
+
+  endfunction 
+  
+  initial begin
+    check_age("kunal", 20);
+    check_age("sakshi", 21);
+
+  end
+endmodule
