@@ -1,0 +1,14 @@
+// calculate simple interest from principal,rate, & time
+
+module tab;
+   int p=1000;
+  int r=5; 
+  int t=24;
+  
+  int si;
+  
+  initial begin
+    si = (p*r*t)/100;
+    $display("simple_interest=%0d", si);
+  end
+endmodule
