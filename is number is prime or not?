@@ -1,0 +1,23 @@
+// is number is prime or not?
+
+module tab;
+ int num; 
+  function int prime(int num);
+    if(num<2)begin
+      return 0;
+    end
+    for( int i=2; i<num; i++)begin
+      if(num%i==0)
+        return 0;
+    end
+    return num;
+    
+  endfunction
+  
+  initial begin
+    $display(" prime num=%0d", prime(4));
+    
+  end
+endmodule 
+  
+    
