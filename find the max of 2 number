@@ -1,0 +1,22 @@
+//find the max of 2 number
+
+module tab;
+   int a,b;
+   
+  
+  function int max_num(int a,b);
+    
+    if(a<b)
+      $display(" b is greater =%0d  a= is small =%0d", b,a);
+    else
+      $display(" not found max number");
+  endfunction
+  
+  initial begin
+  max_num(5,6);
+    max_num(7,6);
+    max_num(6,6);
+
+
+  end
+endmodule 
