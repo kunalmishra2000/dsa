@@ -1,0 +1,74 @@
+// type casting 
+// there are two type of casting in sv
+// dynamic and static casting 
+// dynamic casting :- it's  use to convert one class to other class use  key word :- casting("soruce", destination");
+// it's applicable for opp concept
+
+// static casting :- it's only use for data conversion:-  it's applicable for opp's
+
+// example 
+// static casting 
+
+// module  static_casting();
+//   int a =5;
+//   real b;
+  
+//   initial begin
+//     b=real'(a);
+//     $display("b=%0f", b);
+//   end
+// endmodule 
+
+//Dynamic Casting examples
+
+class parent;
+   int addr;
+  
+  function void display();
+    $display("parent class=%0d", addr);
+  endfunction
+  
+endclass
+
+class child extends parent;
+  int data;
+  
+  function void display();
+    super.display();
+    $display("child class=%0d", data);
+  endfunction
+  
+endclass
+
+module  tab;
+ parent p;
+ child c,c1;
+
+initial begin
+  c=new();
+  //c1=new();
+ // p=new(); // for only need for assign parent into  child c=p;
+   c.data=6;
+   c.addr=7;
+  
+//   p=c1;  ////assigning child class handle to parent class handle
+//   c1.display();
+  
+  
+  // now, we use casting 
+  
+  //assigning parent class handle to child class handle
+  
+//   c1=p; ////assigning child class handle to parent class handle
+//   c1.display(); // it's through error 
+//   //Expression 'p' on rhs is not a class or a compatible class and hence cannot  be assigned to a class handle on lhs
+  
+  
+  // solve this using casting 
+      p=c;
+   // c1=p;
+   $cast(c1,p);   //with the use of $cast, type chek will occur during runtime
+  c1.display();
+end
+endmodule 
+   
