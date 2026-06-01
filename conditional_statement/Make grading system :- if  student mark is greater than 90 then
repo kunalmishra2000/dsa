@@ -1,0 +1,26 @@
+Make grading system :- if  student mark is greater than 90 then   print grade A, if student mark is between 80 - 90 then print grade B, if student mark is between 79 - 33 then print grade B . else fail 
+
+module tab;
+   int mark; 
+   string name;
+  
+  function check(string name, int mark);
+    if(mark>=90)
+      $display("student_name=%s mark=%0d [GRADE A GET STUDENT]", name,mark);
+    else if(mark>=80 && mark <=90)
+      $display("student_name=%s mark=%0d [GRADE B GET STUDENT]", name,mark);
+    else if(mark >=33 && mark <=79)
+      $display("student_name=%s mark=%0d [GRADE C GET STUDENT]", name,mark);
+    else
+      $display("student_name=%s mark=%0d [FAIL STUDENT]", name,mark);
+    
+  endfunction 
+  
+  initial begin
+    check("piyush", 90);
+    check("rohan", 80);
+    check("kunal", 33);
+    check("sandip", 32);
+
+  end
+endmodule
