@@ -1,1 +1,18 @@
 
+module tab;
+   int age;
+  
+  
+  function check(int age);
+    if(age>=18)
+      $display(" he/she is eligible for vote");
+    else
+      $display(" he/she is not eligible for Vote");
+  endfunction
+  
+  initial begin
+    check(17);
+    check(18);
+    check(77);
+  end
+endmodule 
