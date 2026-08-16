@@ -1,0 +1,13 @@
+//Option:-1
+module tab;
+   string name="VLSI";
+   string reverse;  
+  
+  initial begin
+ 
+    for(int i=name.len-1; i>=0; i--)begin
+      $write("%s", name[i]);
+    end
+
+  end
+endmodule 
