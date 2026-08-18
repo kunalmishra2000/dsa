@@ -1,1 +1,22 @@
 
+// sum of two number
+
+class packet;
+
+  
+  function int sum_of_two(int a,b);
+    return a+b;
+  endfunction 
+  
+endclass
+
+module tab;
+  packet pac=new();
+  
+  initial begin
+    
+    $display("sum_of_two_number=%0d", pac.sum_of_two(9,7));
+    $display("sum_of_two_number=%0d", pac.sum_of_two(7,7));
+
+             end
+             endmodule
