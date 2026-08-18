@@ -1,0 +1,20 @@
+
+class packet;
+
+  function void check_greater(int a,b);
+    if(a>b)
+      $display("[a is greater]=%0d", a);
+    else 
+      $display("[b is greater]=%0d", b);
+  endfunction
+endclass
+
+module tab;
+  packet pac=new();
+  
+  initial begin
+    
+    pac.check_greater(8,7);
+    pac.check_greater(3,6);
+             end
+             endmodule
