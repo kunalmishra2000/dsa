@@ -1,0 +1,29 @@
+
+class packet;
+
+  function void check_number_is_pos_neg_zero(int a);
+    if(a >0)
+      $display(" number is pos =%0d", a);
+    else if(a<0) 
+      $display("number is neg =%0d", a);
+    else if(a==0)
+      $display("number is zero =%0d", a);
+  
+
+  endfunction
+endclass
+
+module tab;
+  packet pac=new();
+  
+  initial begin
+    
+    pac.check_number_is_pos_neg_zero(8);
+    pac.check_number_is_pos_neg_zero(-3);
+    pac.check_number_is_pos_neg_zero(0);
+    pac.check_number_is_pos_neg_zero(-128);
+    pac.check_number_is_pos_neg_zero(663);
+    pac.check_number_is_pos_neg_zero(-989);
+    
+             end
+             endmodule
