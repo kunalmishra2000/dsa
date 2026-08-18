@@ -1,0 +1,18 @@
+
+class packet;
+
+  function int average_of_tree_number(int a,b,c);
+    return (a+b+c)/3;
+  endfunction
+  
+endclass
+
+module tab;
+  packet pac=new();
+  
+  initial begin
+    
+    $display("average_of_tree_number=%0d", pac.average_of_tree_number(1,5,7));
+
+             end
+             endmodule
