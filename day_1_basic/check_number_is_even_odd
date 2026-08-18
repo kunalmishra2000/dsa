@@ -1,0 +1,20 @@
+
+class packet;
+
+  function void check_number_is_even_odd(int a);
+    if(a%2==0)
+      $display(" number is even =%0d", a);
+    else 
+      $display("NUm is odd =%0d", a);
+  endfunction
+endclass
+
+module tab;
+  packet pac=new();
+  
+  initial begin
+    
+    pac.check_number_is_even_odd(8);
+    pac.check_number_is_even_odd(3);
+             end
+             endmodule
