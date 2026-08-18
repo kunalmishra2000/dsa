@@ -1,0 +1,24 @@
+// calculate simple interest 
+
+class packet;
+
+// p= princple amount
+// r = rate of inst
+// t= month/year of time
+  
+  function int cal_simple_inst(int p,r,t);
+    return (p*r*t*12)/100; //why cal by 12, becuz, inmy case time consider only one month insst
+  endfunction
+    
+  
+endclass
+
+module tab;
+  packet pac=new();
+  
+  initial begin
+    
+    $display("cal_simple_inst=%0d", pac.cal_simple_inst(150000,4,1));
+
+             end
+             endmodule
