@@ -1,0 +1,26 @@
+
+class packet;
+
+  function void check_triangle_are_valid_or_not(int a,b,c);
+    if((a + b > c) & (a + c > b) &  (b + c > a))
+      $display("valid and triangle are 180 degree");
+    else
+      $display("NOT valid and triangle are not 180 degree");
+
+  
+
+  endfunction
+endclass
+
+module tab;
+  packet pac=new();
+  
+  initial begin
+    pac.check_triangle_are_valid_or_not(0,7,5);
+    pac.check_triangle_are_valid_or_not(9,7,5);
+    pac.check_triangle_are_valid_or_not(60,60,60); //180
+ 
+   
+    
+             end
+             endmodule
