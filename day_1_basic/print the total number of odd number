@@ -1,0 +1,32 @@
+//print the total number of odd number 
+
+class packet;
+ int a=100;
+  
+  //using constraint
+//   constraint x{  a inside {[1:100]};}
+  
+//   constraint xx{ 
+//     a%2==1;
+//   }
+  
+                                    // using function  
+  function void print_odd();
+    for(int i=0; i<100; i++)begin
+      if(i%2==1)
+        $display("a=%0d",i);
+     
+     
+  end
+  endfunction
+  
+endclass
+
+module tab;
+  packet pac=new();
+  initial begin
+    pac.print_odd();
+
+    
+    end
+endmodule 
