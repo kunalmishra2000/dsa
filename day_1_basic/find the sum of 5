@@ -1,0 +1,24 @@
+//find the sum of 5
+class packet;
+int a=5;
+  int store=1;
+  function void sum_of_number();
+    for( int i=1; i<=a; i++)begin
+      store = store+i;
+
+    end
+    $display("store=%0d", store);
+      endfunction
+  
+
+  
+endclass
+
+module tab;
+  packet pac=new();
+  initial begin
+    pac.sum_of_number();
+
+    
+    end
+endmodule 
