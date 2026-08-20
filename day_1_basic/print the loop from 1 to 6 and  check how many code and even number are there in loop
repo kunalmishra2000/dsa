@@ -1,0 +1,45 @@
+//print the loop from 1 to 5
+class packet;
+   int n=0;
+ // int n;
+  int store=0;
+  
+  //check how many code and even number aee there in loop
+      int even_count, odd_count;
+
+  function void counter(int n);
+    for(int i=0; i<=n; i++)begin
+      if(store <=n)begin
+         store++;
+   
+    end
+       $display("store=%0d", store);
+          check_even_odd(); // function call
+
+    end
+
+    
+  endfunction 
+  
+
+   function void check_even_odd();
+        if(store%2==0)
+      even_count++;
+    
+    else
+      odd_count++;
+    
+    
+    $display("even_count=%0d odd_count=%0d", even_count,odd_count);
+   endfunction
+  
+  
+endclass
+
+module tab;
+  packet pac=new();
+  initial begin
+    pac.counter(5);
+    
+    end
+endmodule 
