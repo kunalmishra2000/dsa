@@ -1,0 +1,25 @@
+//find the fact of n  number
+class packet;
+
+  int n;
+  function int fact(int i);
+    if(i==0)
+      return 1;
+    else 
+      return i*fact(i-1);
+  endfunction
+  
+
+  
+endclass
+
+module tab;
+  packet pac=new();
+  initial begin
+    int s;
+    s=  pac.fact(3);
+    $display("fact=%0d",s);
+
+    
+    end
+endmodule 
