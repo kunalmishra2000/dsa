@@ -1,0 +1,25 @@
+// write code for prime number check number is prime or not?
+class packet;
+  
+  function int prime(int a);
+    if(a<2)begin
+      return 0;
+    end
+    for(int i=2; i<a; i++)begin
+      if(a%i==0)
+        return 0;
+    end
+    return a;
+  endfunction 
+  
+endclass
+
+module tab;
+  packet pac=new();
+  initial begin
+    pac.randomize();
+    $display("prime=%0d",pac.prime(4));
+
+    
+    end
+endmodule 
