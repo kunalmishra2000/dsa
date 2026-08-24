@@ -4,7 +4,7 @@ class packet;
   constraint f{foreach(a[i,j]) a[i][j] inside {[1:100]};}
   
   constraint xx{ foreach(a[i,j])
-    a[i].sum==30;}
+    a[j].sum==30;}
                
                function void post_randomize();
                  foreach(a[i])begin  // it's use to display in matrix from
