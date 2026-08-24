@@ -1,4 +1,4 @@
-//write a constraint where the sum of each row in a 2d randomize array should be equal to 30
+//write a constraint where the sum of each colum in a 2d randomize array should be equal to 30
 class packet;
   rand int a[4][4];
   constraint f{foreach(a[i,j]) a[i][j] inside {[1:100]};}
