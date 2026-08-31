@@ -1,0 +1,88 @@
+// // // find  the first and second largest number from array 
+
+// // class packet;
+// //   rand int a[10];
+// //   int first_largest=0;
+// //   int second_largest= 0;
+// //   int third_largest= 0;
+  
+// //   constraint xx{ foreach(a[i]) a[i] inside {[1:100]};}
+  
+ 
+// //   function void post_randomize();
+// //      first_largest =a[0];
+    
+// //     foreach(a[i])begin
+     
+// //       if(a[i] >first_largest)begin
+// //          third_largest = second_largest;
+// //         second_largest = first_largest;
+       
+// //         first_largest=a[i];
+// //       end
+// //        else if(a[i] >second_largest)begin
+// //         third_largest = second_largest;
+// //         second_largest = a[i];
+// //     end
+      
+// //      else if(a[i] >third_largest ) 
+// //         third_largest = a[i];
+// //       end
+    
+// //     $display("a=%0p", a);
+// //     $display(" first_largest=%0p" ,first_largest);
+// //     $display(" second_largest=%0p" ,second_largest);
+// //         $display(" third_largest=%0p" ,third_largest);
+
+// //   endfunction
+  
+// // endclass
+// // module tab;
+// //   packet pac=new();
+// //   initial begin
+    
+// //     repeat(10) pac.randomize();
+// //   end
+// // endmodule 
+
+
+// // find  the first and second largest number from array 
+
+// using shorting 
+
+class packet;
+  rand int a[10];
+ 
+  
+  constraint xx{ foreach(a[i]) a[i] inside {[1:100]};}
+  
+ 
+  function void post_randomize();
+      int temp;
+    for(int i=0; i<10; i++)begin
+      for(int j=i+1; j<10; j++)begin
+        if(a[i]< a[j])begin
+          temp =a[i];
+        a[i]=a[j];
+        a[j]=temp;
+          
+        end
+      end
+    end
+
+    
+    $display("a=%0p", a);
+    $display(" first_largest=%0p" ,a[0]);
+    $display(" second_largest=%0p" ,a[1]);
+    $display(" third_largest=%0p" ,a[2]);
+
+  endfunction
+  
+endclass
+module tab;
+  packet pac=new();
+  initial begin
+    
+    repeat(10) pac.randomize();
+  end
+endmodule 
