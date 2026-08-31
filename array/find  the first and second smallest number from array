@@ -1,0 +1,53 @@
+// find  the first and second smallest number from array 
+
+class packet;
+  rand int a[10];
+  
+  int first_small;
+  int second_small;
+  int third_small;
+  
+  constraint xx{ foreach(a[i]) a[i] inside {[1:100]};}
+  
+ 
+  function void post_randomize();
+    first_small = a[0];
+    
+    foreach(a[i])begin
+     
+      if(a[i] < first_small)begin
+        third_small = second_small;
+        second_small= first_small;
+        first_small =a[i];
+       
+      
+      end
+         else if(a[i] < second_small)begin
+            third_small = second_small;
+           
+                 second_small = a[i];
+       
+    end
+      
+      else if(a[i] < third_small ) 
+        third_small = a[i];
+      
+      
+    end
+    
+    $display("a=%0p", a);
+    $display(" first_small=%0p" ,first_small);
+    $display(" second_small=%0p" ,second_small);
+        $display(" third_small=%0p" ,third_small);
+
+  endfunction
+  
+endclass
+      
+module tab;
+  packet pac=new();
+  initial begin
+    
+    repeat(10) pac.randomize();
+  end
+endmodule 
