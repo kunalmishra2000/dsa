@@ -1,0 +1,15 @@
+// using while loop print 1 to n 
+module tab;
+   int n=10;
+    int count=0;
+  function void cond();
+    while(count<n)begin
+      count = count+1;
+    $display(" print count=%0d", count);
+    end
+  endfunction
+  
+  initial begin
+    cond();
+  end
+endmodule 
