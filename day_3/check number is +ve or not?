@@ -1,0 +1,17 @@
+module tab;
+int a;
+  
+  function void check(int a);
+    if(a>0)
+      $display(" a is +ve number=%0d",a);
+    else 
+      $display("a is not +ve number=%0d",a);
+  endfunction
+  
+  initial begin
+    check(-9);
+    check(8);
+    check(-5);
+  end
+endmodule 
+    
