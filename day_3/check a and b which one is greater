@@ -1,0 +1,17 @@
+module tab;
+int a, b;
+  
+  function void check(int a,b);
+    if(a>b)
+      $display("a is greater then b");
+    else 
+      $display("b is greater then a");
+  endfunction
+  
+  initial begin
+    check(9,7);
+    check(8,8);
+    check(8,9);
+  end
+endmodule 
+    
