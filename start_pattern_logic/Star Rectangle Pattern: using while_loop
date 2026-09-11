@@ -1,0 +1,15 @@
+module tab;
+   int i;
+  int j;
+  initial begin
+    while(i<6) begin //ROW
+      j=0; // why this need? beacuse  after every row increment we need to  reset our  j==0 to again increment from 0 to 5
+      while(j<5)begin //COLOM
+        $write("*");
+        j++;
+      end
+      $display();
+      i++;
+    end
+  end
+endmodule
