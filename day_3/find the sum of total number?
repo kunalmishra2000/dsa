@@ -1,0 +1,21 @@
+// find the sum of total number?
+module tab;
+   int  a=6;
+  int sum;
+  int count=0;
+  function void display();
+    for(int i=0; i<a; i++)begin
+      if(a>count)begin
+        sum += count;
+       count++;
+    end
+    end
+    $display("count=%0d  sum=%0d a=%0d", count, sum,a);
+  endfunction 
+    
+  initial begin
+    display();
+  end
+  
+endmodule 
+  
